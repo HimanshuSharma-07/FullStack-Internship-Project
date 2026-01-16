@@ -1,15 +1,11 @@
-import express from 'express';
+import dotenv from "dotenv"
+import connectDB from "./db/index.js";
 
-import dotenv from 'dotenv';
-dotenv.config();
-
-const app = express()
-const port = process.env.port || 4000
-
-app.get('/', (req, res) => {
-    res.send("Hello World!")
+dotenv.config({
+    path: './env'
 })
 
-app.listen(port, () => {
-    console.log(`Server is listening at port ${port}`)
-})
+console.log(".env : ", process.env.MONGODB_URI)
+
+
+connectDB()
