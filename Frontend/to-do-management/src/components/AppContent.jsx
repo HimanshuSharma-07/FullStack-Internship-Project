@@ -1,12 +1,9 @@
-import React from 'react';
 import { TodoProvider, useTodo } from './contexts/TodoContext.jsx';
 import  LeftSidebar  from './components/LeftSideBar';
 import  TopBar  from './components/Topbar';
 import  KanbanColumn  from './components/KanbanColumn';
 import  RightSidebar  from './components/RightSidebar';
 import  TaskModal  from './components/TaskModal';
-import { Routes, Route } from 'react-router-dom';
-import LoginPage from '../src/pages/LoginPage.jsx';
 
 
 function AppContent() {
@@ -48,20 +45,4 @@ function AppContent() {
   );
 }
 
-function App() {
-  return (
-    <TodoProvider>
-
-    {/* <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/" element={<AppContent />} />
-    </Routes> */}
-
-    <AppContent />
-    
-
-    </TodoProvider>
-  );
-}
-
-export default App;
+export default AppContent;
